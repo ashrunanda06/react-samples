@@ -9,7 +9,11 @@ const genFreshModel = (props) => {
     return (
         <Aux>
             <h3>generate fresh model</h3>
-            <input type="number" min={'1'} max={'52'} />
+            <input 
+              type="number"
+              min={'1'}
+              max={'52'} 
+              onChange={props.genFreshModelChange} />
         </Aux>
     );
     

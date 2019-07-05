@@ -1,3 +1,4 @@
+import CardsModel from '../model/CardsModel';
 
 const compareArray = (item1, item2) => {
     if (item1.value < item2.value) {
@@ -11,6 +12,9 @@ const compareArray = (item1, item2) => {
 };
 
 class GameUtility {
+
+    static typeArr = ['C','H','T','P'];
+    static value =1;
 
     static shuffleCard(shuffleCards) {
     for (let i = shuffleCards.length - 1; i > 0; i--) {
@@ -48,6 +52,24 @@ class GameUtility {
             });
         });
         return sortedArr;
+    }
+
+    static generateFreshData(num){
+        const numberOfLoops= Math.ceil(num/4);
+
+        const cardsArr=[];
+        for (let i=1; i<=numberOfLoops; i++){
+            this.typeArr.map(tp=>
+                {
+                    CardsModel.getCards().map(item=>
+                        {
+                            if(item.type==tp && item.value==i+1){
+                                cardsArr.push(item);
+                            }
+                        });
+                }); 
+        }
+       return cardsArr;
     }
 }
 export default GameUtility;
