@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../card-deck/card/Card';
-import Aux from '../../hoc/Aux';
+import Aux from '../../hoc/Auxiliary';
 import classContainer from '../../hoc/classContainer';
 import './CardDeck.css'
 

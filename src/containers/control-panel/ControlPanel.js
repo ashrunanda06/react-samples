@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Aux from '../../hoc/Aux';
+import Aux from '../../hoc/Auxiliary';
 import SortByType from '../../components/sort-by-type/SortByType';
 import SortByRank from '../../components/sort-by-rank/SortByRank';
 import GenFreshModel from '../../components/gen-fresh-model/GenFreshModel';
